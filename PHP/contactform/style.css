@@ -1,0 +1,102 @@
+
+/* 全体のスタイル */
+body {
+    font-family: Arial, sans-serif; /* フォントの設定 */
+    background-color: white; /* 背景色 */
+    margin: 0; /* マージンをリセット */
+    padding: 20px; /* パディングを追加 */
+}
+
+/* ヘッダーのスタイル */
+h1 {
+    margin: 0 auto;
+    margin-top:30px;
+    margin-bottom:20px;
+    border-left:4px red solid;
+    background-color:#f1f1f1;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:15px;
+    width:525px;
+    font-size:20px;
+   
+}
+
+/* フォームのスタイル */
+form {
+    background-color: #fbfbfb; /* フォームの背景色 */
+  
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 影をつける */
+    padding: 20px; /* 内部のパディング */
+    max-width: 500px; /* 最大幅 */
+    margin: 0 auto; /* 中央揃え */
+    transition: box-shadow 0.3s ease; /* フォームの影にトランジションを追加 */
+}
+
+
+form div{
+    padding: 10px;
+}
+
+/* ラベルのスタイル */
+label {
+    font-weight: bold; /* 太字 */
+    margin-top: 10px; /* 上のマージン */
+}
+
+/*ラベル横の必須*/
+.required {
+    color: red;
+}
+
+/* 入力フィールドとテキストエリアのスタイル */
+input[type="text"], 
+textarea, 
+select {
+    width: 100%; /* 幅を100%に */
+    padding: 10px; /* 内部のパディング */
+    margin-top: 5px; /* 上のマージン */
+    border: 1px solid #ccc; /* ボーダー */
+    box-sizing: border-box; /* ボックスサイズを調整 */
+    transition: border-color 0.3s ease; /* ボーダーのトランジション */
+}
+
+/* フォーカス時のスタイル */
+input[type="text"]:focus, 
+textarea:focus, 
+select:focus {
+    border-color: skyblue; /* フォーカス時のボーダー色 */
+    outline: none; /* デフォルトのアウトラインを消す */
+}
+
+/* ボタンのスタイル */
+input[type="submit"] {
+    background-color: skyblue; /* 背景色 */
+    color: white; /* テキストの色 */
+    border: none; /* ボーダーをなし */
+    padding: 10px 15px; /* 内部のパディング */
+    border-radius: 4px; /* 角を丸く */
+    cursor: pointer; /* カーソルをポインターに */
+    margin-top: 15px; /* 上のマージン */
+    font-size: 16px; /* フォントサイズ */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* トランジション */
+}
+
+input[type="submit"]:hover {
+    background-color: sk; /* ホバー時の背景色 */
+    transform: translateY(-2px); /* ホバー時に少し上に移動 */
+}
+
+/* メディアクエリでレスポンシブデザイン */
+@media (max-width: 600px) {
+    form {
+        padding: 15px; /* スマホ用のパディング */
+    }
+
+    input[type="submit"] {
+        font-size: 14px; /* スマホ用のフォントサイズ */
+    }
+}
+
+
+

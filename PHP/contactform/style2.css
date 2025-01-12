@@ -1,0 +1,71 @@
+/* 全体のスタイル */
+body {
+    font-family: Arial, sans-serif; /* フォントの設定 */
+    background-color: white; /* 背景色 */
+    margin: 0; /* マージンをリセット */
+    padding: 20px; /* パディングを追加 */
+}
+
+/* ヘッダーのスタイル */
+h1 {
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-left: 4px red solid;
+    background-color: #f1f1f1;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    width: 525px;
+    font-size: 20px;
+}
+
+/* 確認内容のスタイル */
+.confirm {
+    margin: 0 auto; 
+    background-color: #fbfbfb;
+    border: 3px #ebebeb solid;
+    border-radius: 10px;
+    width: 500px;
+    padding: 20px;
+    padding-bottom: 60px;
+}
+
+/* 各項目のスタイル */
+.confirm p {
+    margin: 10px 0; /* 上下のマージンを設定 */
+}
+
+/* ボタンのスタイル */
+.bottons {
+    display: flex; /* フレックスボックスを使用 */
+    justify-content: space-between; /* ボタン間のスペースを均等に */
+    margin-top: 20px; /* 上のマージン */
+}
+
+.button1, .button2 {
+    padding: 10px 20px; /* ボタンの内側のパディング */
+    border: none; /* ボーダーなし */
+    border-radius: 5px; /* 角を丸く */
+    cursor: pointer; /* カーソルをポインターに変更 */
+    
+}
+
+/* 戻るボタンのスタイル */
+.button1 {
+    background-color: lightgray; /* 灰色 */
+    color: white; /* 文字色を白に */
+}
+
+/* 登録ボタンのスタイル */
+.button2 {
+    background-color: skyblue; /* 水色 */
+    color: white; /* 文字色を白に */
+    margin-right: 240px;
+}
+
+/* ボタンにホバー効果を追加 */
+.button1:hover, .button2:hover {
+    opacity: 0.9; /* ホバー時の透明度を変更 */
+}
+

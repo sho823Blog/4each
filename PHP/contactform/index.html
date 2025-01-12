@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>お問い合わせフォーム</title>
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- スタイルシートのリンク -->
+</head>
+
+<body>
+
+    <h1>お問い合わせフォーム</h1>
+    <form method="POST" action="mail_confirm.php" onsubmit="return validateForm()">
+        <div>
+            <label>名前 <span class="required">必須</span></label> <!-- 名前のラベル -->
+            <br>
+            <input type="text" name="name" size="50" placeholder="名前を入力" required> <!-- 名前入力欄 -->
+        </div>
+        <div>
+            <label>メールアドレス <span class="required">必須</span></label> <!-- メールアドレスのラベル -->
+            <br>
+            <input type="email" name="mail" size="50" placeholder="メールアドレスを入力" required> <!-- メールアドレス入力欄 -->
+        </div>
+        <div>
+            <label>年齢</label><br>
+            <select name="age"> <!-- 年齢のプルダウンメニュー -->
+                <option value="">選択して下さい</option> <!-- デフォルトの選択肢 -->
+                <script>
+                    // 年齢のプルダウンメニューを生成
+                    for (let age = 18; age <= 65; age++) {
+                        document.write(`<option value="${age}">${age}</option>`); // 年齢の選択肢を追加
+                    }
+                </script>
+            </select>
+        </div>
+        <div>
+            <label>コメント <span class="required">必須</span></label><br> <!-- コメントのラベル -->
+            <textarea name="comment" rows="20" cols="51" placeholder="問い合わせ内容を入力" required></textarea> <!-- コメント入力欄 -->
+        </div>
+        <div>
+            <input type="submit" value="送信"> <!-- 送信ボタン -->
+        </div>
+    </form>
+
+    <script>
+        // フォームの入力内容をバリデーションする関数
+        function validateForm() {
+            const name = document.querySelector('input[name="name"]').value; // 名前の値を取得
+            const email = document.querySelector('input[name="mail"]').value; // メールアドレスの値を取得
+            const comment = document.querySelector('textarea[name="comment"]').value; // コメントの値を取得
+
+            // 必須項目が未入力の場合、アラートを表示して送信を防止
+            if (!name || !email || !comment) {
+                alert("必須項目をすべて入力してください。");
+                return false; // フォーム送信をキャンセル
+            }
+            return true; // バリデーションを通過した場合、フォーム送信を許可
+        }
+    </script>
+    
+</body>
+</html>
